@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Button Counter</title>     
+    </head>
+    <body>
+        {% if user.is_authenticated %}
+        <table border="visible">
+            <tr>
+                <th>username</th>
+                <th>fat count</th>
+                <th>dumb count</th>
+                <th>stupid count</th>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.user }}</td>
+                    <td>{{ user.fat }}</td>
+                    <td>{{ user.dumb }}</td>
+                    <td>{{ user.stupid }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">login</a>
+        {% endif %}
+    </body>
+</html>
