@@ -23,10 +23,14 @@
     <body>
         <!-- Wrap all page content here -->
         {% if user.is_authenticated %}
-        
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+		<ul class="nav navbar-nav navbar-right">
+      		<li><a href="{% url 'logout' %}">Logout</a></li>
+		<li><a href="http://github.com/sreehari1997/django-bot-server">code</a></li>
+    		</ul>
+	</nav>
         <div id="wrap" class="BotMainDiv" ng-controller="ChatCtrl">
             <div id='husername' style="visibility: hidden;">{{ user.username }}</div>
-            <div style="color:blue;"><a href="{% url 'logout' %}">logout</a></div>
             <!-- Begin page content -->
             <div class="container-fluid" id="body-container" style="border-bottom: #eee 1px solid;">
                

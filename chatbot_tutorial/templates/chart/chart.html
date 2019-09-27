@@ -1,10 +1,14 @@
+{% load staticfiles %}
 <html>
     <head>
-        <title>Button Counter</title>     
+        <title>Button Counter</title>
+	<link rel="stylesheet" href="{% static 'chatbot_tutorial/bootstrap/css/bootstrap.min.css' %}">     
     </head>
     <body>
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	</nav>
         {% if user.is_authenticated %}
-        <table border="visible">
+        <table class="table table-bordered table-dark">
             <tr>
                 <th>username</th>
                 <th>fat count</th>
