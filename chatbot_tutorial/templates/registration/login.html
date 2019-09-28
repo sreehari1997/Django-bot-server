@@ -1,6 +1,18 @@
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Button Counter</title>
+	      <link rel="stylesheet" href="{% static 'chatbot_tutorial/bootstrap/css/bootstrap.min.css' %}">     
+    </head>
+    <body>
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <h4>Login</h4>
+      </nav>
+      
+      <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Login</button>
+      </form>   
+    </body>
+</html>
